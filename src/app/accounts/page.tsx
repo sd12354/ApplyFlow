@@ -22,17 +22,12 @@ export default async function AccountsPage({ searchParams }: AccountsPageProps) 
         <Link href="/api/connect/google?callbackUrl=/accounts">
           <Button variant="outline">Connect Google (Gmail)</Button>
         </Link>
-        <Link href="/api/connect/microsoft?callbackUrl=/accounts">
-          <Button variant="outline">Connect Microsoft (Outlook)</Button>
-        </Link>
       </div>
 
       {error ? (
         <div className="rounded-xl border border-red-200 bg-red-50 p-4 text-sm text-red-800">
           {error === "missing_google_oauth" &&
             "Missing GOOGLE_CLIENT_ID / GOOGLE_CLIENT_SECRET in your environment."}
-          {error === "missing_microsoft_oauth" &&
-            "Missing MICROSOFT_CLIENT_ID / MICROSOFT_CLIENT_SECRET / AZURE_AD_TENANT_ID in your environment."}
         </div>
       ) : null}
 

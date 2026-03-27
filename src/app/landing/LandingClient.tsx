@@ -106,9 +106,9 @@ export function LandingClient() {
                 Turn your inbox into a job application pipeline.
               </h1>
               <p className="mt-4 max-w-xl text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
-                ApplyFlow connects Gmail and Outlook, finds the emails that
-                matter, and organizes them into a Kanban board: Applied,
-                Interview, Rejected, Offer.
+                ApplyFlow connects Gmail, finds the emails that matter, and
+                organizes them into a Kanban board: Applied, Interview,
+                Rejected, Offer.
               </p>
 
               <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center">

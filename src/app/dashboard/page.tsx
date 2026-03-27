@@ -232,14 +232,6 @@ export default function DashboardPage() {
             >
               Sign in with Google
             </Button>
-            <Button
-              variant="outline"
-              onClick={() =>
-                signIn("azure-ad", { callbackUrl: "/dashboard" })
-              }
-            >
-              Sign in with Microsoft
-            </Button>
           </div>
         </div>
       </div>

@@ -1,6 +1,5 @@
 import NextAuth from "next-auth";
 import GoogleProvider from "next-auth/providers/google";
-import AzureADProvider from "next-auth/providers/azure-ad";
 import { prisma } from "@/lib/prisma";
 import { encryptString } from "@/lib/encryption";
 
@@ -28,18 +27,6 @@ const authHandler = NextAuth({
           prompt: "consent",
           scope:
             "openid email profile https://www.googleapis.com/auth/gmail.readonly",
-        },
-      },
-    }),
-    AzureADProvider({
-      clientId: process.env.MICROSOFT_CLIENT_ID ?? "",
-      clientSecret: process.env.MICROSOFT_CLIENT_SECRET ?? "",
-      tenantId: process.env.AZURE_AD_TENANT_ID,
-      authorization: {
-        params: {
-          // Request Graph permissions + offline refresh token.
-          scope: "openid profile email Mail.Read offline_access",
-          prompt: "consent",
         },
       },
     }),
